@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+
+  <title>椿｜本鑑定書デザインサンプル</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      margin: 0;
+      padding: 0;
+      background: #f5ebe8;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      color: #493a3a;
+      font-family:
+        "Hiragino Mincho ProN",
+        "Yu Mincho",
+        "YuMincho",
+        serif;
+      line-height: 1.95;
+      -webkit-text-size-adjust: 100%;
+      background:
+        radial-gradient(
+          circle at 8% 3%,
+          rgba(255, 255, 255, 0.96) 0,
+          rgba(255, 255, 255, 0) 27%
+        ),
+        radial-gradient(
+          circle at 90% 13%,
+          rgba(230, 198, 208, 0.38) 0,
+          rgba(230, 198, 208, 0) 30%
+        ),
+        radial-gradient(
+          circle at 15% 82%,
+          rgba(221, 205, 235, 0.34) 0,
+          rgba(221, 205, 235, 0) 31%
+        ),
+        linear-gradient(
+          180deg,
+          #f9f1ed 0%,
+          #f4e8e6 48%,
+          #eee2e8 100%
+        );
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      z-index: 0;
+      pointer-events: none;
+      border-radius: 50%;
+      filter: blur(4px);
+    }
+
+    body::before {
+      width: 190px;
+      height: 190px;
+      top: -65px;
+      right: -72px;
+      background:
+        radial-gradient(
+          circle,
+          rgba(211, 157, 174, 0.2) 0%,
+          rgba(211, 157, 174, 0) 70%
+        );
+    }
+
+    body::after {
+      width: 220px;
+      height: 220px;
+      bottom: -90px;
+      left: -105px;
+      background:
+        radial-gradient(
+          circle,
+          rgba(180, 151, 204, 0.18) 0%,
+          rgba(180, 151, 204, 0) 72%
+        );
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 12px 8px 30px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 34px 18px 36px;
+      text-align: center;
+      border: 1px solid rgba(196, 156, 111, 0.6);
+      border-radius: 22px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.96),
+          rgba(255, 247, 245, 0.91)
+        );
+      box-shadow:
+        0 16px 34px rgba(105, 72, 75, 0.11),
+        inset 0 0 0 5px rgba(255, 255, 255, 0.47);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 170px;
+      height: 170px;
+      top: -73px;
+      left: -69px;
+      border-radius: 50%;
+      background:
+        radial-gradient(
+          circle,
+          rgba(223, 176, 189, 0.48) 0%,
+          rgba(223, 176, 189, 0) 68%
+        );
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 185px;
+      height: 185px;
+      right: -75px;
+      bottom: -87px;
+      border-radius: 50%;
+      background:
+        radial-gradient(
+          circle,
+          rgba(209, 188, 226, 0.4) 0%,
+          rgba(209, 188, 226, 0) 69%
+        );
+    }
+
+    .sample-badge {
+      position: absolute;
+      top: 13px;
+      right: 14px;
+      z-index: 2;
+      padding: 4px 9px;
+      border: 1px solid rgba(177, 130, 143, 0.3);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.64);
+      color: #9b6f7e;
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.14em;
+    }
+
+    .flower-mark {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 42px;
+      height: 42px;
+      margin: 0 auto 13px;
+      color: #c39a5e;
+    }
+
+    .brand {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 12px;
+      color: #ae8054;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+    }
+
+    .main-title {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: #67404f;
+      font-size: 31px;
+      font-weight: 500;
+      line-height: 1.45;
+      letter-spacing: 0.12em;
+    }
+
+    .title-line {
+      position: relative;
+      z-index: 1;
+      width: 64px;
+      height: 1px;
+      margin: 17px auto 15px;
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          #c6a067,
+          transparent
+        );
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: #9a6878;
+      font-size: 13px;
+      line-height: 1.85;
+      letter-spacing: 0.06em;
+    }
+
+    .document {
+      overflow: hidden;
+      margin-top: 14px;
+      border: 1px solid rgba(196, 156, 111, 0.52);
+      border-radius: 22px;
+      background: rgba(255, 252, 249, 0.95);
+      box-shadow: 0 18px 40px rgba(105, 72, 75, 0.11);
+    }
+
+    .name-area {
+      position: relative;
+      overflow: hidden;
+      padding: 26px 20px 24px;
+      border-bottom: 1px solid rgba(203, 172, 136, 0.48);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 251, 247, 0.98),
+          rgba(250, 238, 241, 0.82)
+        );
+    }
+
+    .name-area::after {
+      content: "✦";
+      position: absolute;
+      right: 19px;
+      bottom: 8px;
+      color: rgba(190, 136, 154, 0.18);
+      font-size: 72px;
+      line-height: 1;
+    }
+
+    .name-row {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .small-flower {
+      display: flex;
+      flex: 0 0 40px;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(194, 150, 88, 0.75);
+      border-radius: 50%;
+      color: #ba8952;
+      font-size: 18px;
+    }
+
+    .recipient-name {
+      margin: 0;
+      color: #68404f;
+      font-size: 23px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+    }
+
+    .name-accent {
+      width: 55px;
+      height: 2px;
+      margin: 10px 0 0 52px;
+      background:
+        linear-gradient(
+          90deg,
+          #c79f64,
+          rgba(199, 159, 100, 0)
+        );
+    }
+
+    .sample-notice {
+      margin: 20px 18px 0;
+      padding: 11px 13px;
+      border: 1px solid rgba(185, 141, 154, 0.27);
+      border-radius: 10px;
+      background: rgba(248, 235, 240, 0.66);
+      color: #86606d;
+      font-size: 12px;
+      line-height: 1.75;
+    }
+
+    .content {
+      padding: 24px 18px 34px;
+    }
+
+    p {
+      margin: 0 0 20px;
+      color: #4d4140;
+      font-size: 15px;
+      letter-spacing: 0.015em;
+    }
+
+    .opening {
+      margin-bottom: 30px;
+    }
+
+    .section {
+      margin-top: 40px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      margin: 0 0 19px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(191, 145, 159, 0.42);
+      color: #87556a;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.6;
+      letter-spacing: 0.035em;
+    }
+
+    .section-icon {
+      flex: 0 0 auto;
+      color: #bc879b;
+      font-size: 15px;
+      transform: translateY(4px);
+    }
+
+    .quote-box {
+      position: relative;
+      margin: 28px 0;
+      padding: 25px 19px 20px;
+      border: 1px solid rgba(191, 150, 169, 0.36);
+      border-radius: 12px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(249, 238, 244, 0.84),
+          rgba(245, 240, 250, 0.76)
+        );
+    }
+
+    .quote-box::before {
+      content: "“";
+      position: absolute;
+      top: 2px;
+      left: 12px;
+      color: rgba(171, 112, 137, 0.34);
+      font-family: Georgia, serif;
+      font-size: 46px;
+      line-height: 1;
+    }
+
+    .quote-box p {
+      margin: 0;
+      padding-left: 13px;
+      color: #795064;
+      font-size: 15px;
+      line-height: 2;
+    }
+
+    .important-box {
+      margin: 27px 0;
+      padding: 17px 16px;
+      border-left: 3px solid #c392a4;
+      border-radius: 0 10px 10px 0;
+      background: rgba(249, 238, 242, 0.7);
+    }
+
+    .important-box p {
+      margin: 0;
+      color: #6f4b59;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 35px 0;
+      color: #c19a63;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(193, 154, 99, 0.65)
+        );
+    }
+
+    .divider::after {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(193, 154, 99, 0.65),
+          transparent
+        );
+    }
+
+    .signature {
+      margin-top: 42px;
+      padding-top: 26px;
+      border-top: 1px solid rgba(196, 156, 111, 0.42);
+      text-align: right;
+    }
+
+    .signature p {
+      margin-bottom: 9px;
+    }
+
+    .signature-name {
+      color: #825367;
+      font-size: 18px;
+      letter-spacing: 0.16em;
+    }
+
+    @media screen and (min-width: 680px) {
+      .page {
+        padding: 28px 16px 50px;
+      }
+
+      .hero {
+        padding: 50px 32px 52px;
+      }
+
+      .main-title {
+        font-size: 43px;
+      }
+
+      .subtitle {
+        font-size: 15px;
+      }
+
+      .name-area {
+        padding: 33px 38px 30px;
+      }
+
+      .content {
+        padding: 40px 46px 52px;
+      }
+
+      .sample-notice {
+        margin-right: 46px;
+        margin-left: 46px;
+      }
+
+      p {
+        font-size: 15.8px;
+      }
+
+      .section-title {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="hero">
+      <span class="sample-badge">SAMPLE</span>
+
+      <svg
+        class="flower-mark"
+        viewBox="0 0 64 64"
+        aria-hidden="true"
+      >
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        >
+          <ellipse cx="32" cy="18" rx="10" ry="14"></ellipse>
+          <ellipse
+            cx="44"
+            cy="27"
+            rx="10"
+            ry="14"
+            transform="rotate(58 44 27)"
+          ></ellipse>
+          <ellipse
+            cx="39"
+            cy="42"
+            rx="10"
+            ry="14"
+            transform="rotate(118 39 42)"
+          ></ellipse>
+          <ellipse
+            cx="24"
+            cy="42"
+            rx="10"
+            ry="14"
+            transform="rotate(-118 24 42)"
+          ></ellipse>
+          <ellipse
+            cx="20"
+            cy="27"
+            rx="10"
+            ry="14"
+            transform="rotate(-58 20 27)"
+          ></ellipse>
+          <circle cx="32" cy="31" r="7"></circle>
+        </g>
+      </svg>
+
+      <p class="brand">TSUBAKI PRIVATE READING</p>
+
+      <h1 class="main-title">本鑑定書</h1>
+
+      <div class="title-line"></div>
+
+      <p class="subtitle">
+        想いの奥にある本音とご縁を、丁寧に読み解く
+      </p>
+    </header>
+
+    <article class="document">
+
+      <div class="name-area">
+        <div class="name-row">
+          <div class="small-flower">✿</div>
+          <h2 class="recipient-name">花村様</h2>
+        </div>
+        <div class="name-accent"></div>
+      </div>
+
+      <div class="sample-notice">
+        こちらはデザイン確認用の架空例文です。
+        実際の鑑定書では、相談者様のお名前と鑑定内容へ差し替えます。
+      </div>
+
+      <div class="content">
+
+        <section class="opening">
+          <p>花村様</p>
+
+          <p>大変お待たせいたしました。</p>
+
+          <p>
+            お送りいただいたご状況をもとに、
+            お二人のご縁と、お相手様の今のお気持ちを
+            丁寧に視させていただきました。
+          </p>
+
+          <p>
+            連絡を待つ時間の中で、
+            少しの反応に期待しながらも、
+            このまま距離が開いてしまうのではないかと
+            不安になる日もあったと思います。
+          </p>
+
+          <p>
+            今回視えてきたことを、
+            良い部分だけに偏らず、
+            これからの関わり方まで含めてお伝えいたします。
+          </p>
+        </section>
+
+        <div class="divider">✿</div>
+
+        <section class="section">
+          <h2 class="section-title">
+            <span class="section-icon">❖</span>
+            今回の鑑定で最初に視えたこと
+          </h2>
+
+          <p>
+            お二人の間にあるご縁は、
+            完全に途切れてしまった状態ではありません。
+          </p>
+
+          <p>
+            ただ、今のお相手様の中では、
+            関係を前へ進めたい気持ちよりも、
+            もう一度傷つくことへの警戒が
+            強く表れているように視えます。
+          </p>
+
+          <div class="quote-box">
+            <p>
+              忘れたいわけではない。<br>
+              ただ、今すぐ以前と同じ距離へ戻ることは怖い。<br>
+              もう少し気持ちを整理する時間がほしい。
+            </p>
+          </div>
+
+          <p>
+            このような迷いがあるため、
+            今は答えを急いで求めるよりも、
+            お相手様が安心して言葉を交わせる関係を
+            積み直すことが先になります。
+          </p>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">
+            <span class="section-icon">❖</span>
+            お相手様の心の奥にある本音
+          </h2>
+
+          <p>
+            お相手様の中には、
+            花村様との時間を大切な記憶として
+            持ち続けている部分があります。
+          </p>
+
+          <p>
+            一方で、過去のすれ違いを思い出した時には、
+            また同じことが繰り返されるのではないかという
+            不安も戻ってきやすい状態です。
+          </p>
+
+          <div class="important-box">
+            <p>
+              今必要なのは、強く気持ちを伝えることではなく、
+              「以前とは違う関わり方ができる」と
+              行動を通して伝えていくことです。
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">
+            <span class="section-icon">❖</span>
+            今選ぶべき最初の一歩
+          </h2>
+
+          <p>
+            次に顔を合わせる機会がある場合は、
+            長い会話をしようとせず、
+            明るく短い挨拶だけを交わしてください。
+          </p>
+
+          <p>
+            一度反応が良かったとしても、
+            その日のうちに距離を縮めようとせず、
+            短いやり取りで終えることが大切です。
+          </p>
+
+          <p>
+            安心できる関わりが何度か重なった時、
+            お相手様の方から会話を続けようとする動きが
+            少しずつ表れやすくなります。
+          </p>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">
+            <span class="section-icon">❖</span>
+            最後に
+          </h2>
+
+          <p>花村様。</p>
+
+          <p>
+            大切な方との関係が止まって見える時ほど、
+            早く答えを知りたくなるものです。
+          </p>
+
+          <p>
+            ただ、今のお二人に必要なのは、
+            一度に関係を戻そうとすることではありません。
+          </p>
+
+          <p>
+            お互いが必要以上に身構えず、
+            自然に言葉を交わせる時間を
+            一つずつ積み直していくことです。
+          </p>
+
+          <p>
+            花村様がご自身を責め続けるのではなく、
+            これからの関係に誠実に向き合うために、
+            今回の鑑定を活かしていけますように。
+          </p>
+        </section>
+
+        <div class="signature">
+          <p>心を込めてお届けいたしました。</p>
+          <p class="signature-name">椿</p>
+        </div>
+
+      </div>
+    </article>
+
+  </main>
+</body>
+</html>
