@@ -217,72 +217,8 @@
       box-shadow: 0 18px 40px rgba(105, 72, 75, 0.11);
     }
 
-    .name-area {
-      position: relative;
-      overflow: hidden;
-      padding: 26px 20px 24px;
-      border-bottom: 1px solid rgba(203, 172, 136, 0.48);
-      background:
-        linear-gradient(
-          135deg,
-          rgba(255, 251, 247, 0.98),
-          rgba(250, 238, 241, 0.82)
-        );
-    }
-
-    .name-area::after {
-      content: "✦";
-      position: absolute;
-      right: 19px;
-      bottom: 8px;
-      color: rgba(190, 136, 154, 0.18);
-      font-size: 72px;
-      line-height: 1;
-    }
-
-    .name-row {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .small-flower {
-      display: flex;
-      flex: 0 0 40px;
-      width: 40px;
-      height: 40px;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(194, 150, 88, 0.75);
-      border-radius: 50%;
-      color: #ba8952;
-      font-size: 18px;
-    }
-
-    .recipient-name {
-      margin: 0;
-      color: #68404f;
-      font-size: 23px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-    }
-
-    .name-accent {
-      width: 55px;
-      height: 2px;
-      margin: 10px 0 0 52px;
-      background:
-        linear-gradient(
-          90deg,
-          #c79f64,
-          rgba(199, 159, 100, 0)
-        );
-    }
-
     .content {
-      padding: 24px 18px 34px;
+      padding: 28px 18px 38px;
     }
 
     p {
@@ -296,8 +232,16 @@
       margin-bottom: 30px;
     }
 
+    .client-name {
+      margin-bottom: 28px;
+      color: #68404f;
+      font-size: 19px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+    }
+
     .section {
-      margin-top: 40px;
+      margin-top: 42px;
     }
 
     .section-title {
@@ -324,7 +268,7 @@
     .quote-box {
       position: relative;
       margin: 28px 0;
-      padding: 25px 19px 20px;
+      padding: 29px 19px 21px;
       border: 1px solid rgba(191, 150, 169, 0.36);
       border-radius: 12px;
       background:
@@ -421,8 +365,8 @@
     }
 
     .signature {
-      margin-top: 42px;
-      padding-top: 26px;
+      margin-top: 46px;
+      padding-top: 28px;
       border-top: 1px solid rgba(196, 156, 111, 0.42);
       text-align: right;
     }
@@ -454,17 +398,17 @@
         font-size: 15px;
       }
 
-      .name-area {
-        padding: 33px 38px 30px;
-      }
-
       .content {
-        padding: 40px 46px 52px;
+        padding: 42px 46px 54px;
       }
 
       p,
       .simple-list li {
         font-size: 15.8px;
+      }
+
+      .client-name {
+        font-size: 21px;
       }
 
       .section-title {
@@ -529,24 +473,15 @@
       <div class="title-line"></div>
 
       <p class="subtitle">
-        想いの奥にある本音とご縁を、丁寧に読み解く
+        想いの奥にある本音と、ご縁の行方を視る
       </p>
     </header>
 
     <article class="document">
-
-      <div class="name-area">
-        <div class="name-row">
-          <div class="small-flower">✿</div>
-          <h2 class="recipient-name">増田直大様</h2>
-        </div>
-        <div class="name-accent"></div>
-      </div>
-
       <div class="content">
 
         <section class="opening">
-          <p>増田直大様</p>
+          <p class="client-name">増田直大様</p>
 
           <p>
             このたびは、数ある鑑定の中から私をお選びいただき、恋縁未来の深層霊視鑑定をお任せくださいまして、誠にありがとうございます。
